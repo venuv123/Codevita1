@@ -1,0 +1,12 @@
+number_of_brides_and_grooms = int(input())
+brides = input()
+grooms = input()
+i = 0
+while i < number_of_brides_and_grooms:
+    index = grooms.find(brides[0])
+    if index < 0:
+        break
+    grooms = grooms[index+1:]+grooms[:index]
+    brides = brides[1:]
+    i += 1
+print(len(brides),end="")
